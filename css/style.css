@@ -1,0 +1,65 @@
+:root {
+  --neutral-950: hsl(0, 0%, 0%);
+  --neutral-300: hsl(0, 0%, 85%);
+  --neutral-0: hsl(0, 0%, 100%);
+  --aqua-100: hsl(196, 46%, 79%);
+  --aqua-50: hsl(196, 83%, 93%);
+  --navy: hsl(240, 67%, 8%);
+  --teal: hsl(169, 73%, 44%);
+  --purple: hsl(283, 67%, 71%);
+  --bronze: hsl(30, 47%, 49%);
+  --red: hsl(2, 68%, 53%);
+  --orange: hsl(10, 63%, 51%);
+  --amber: hsl(33, 82%, 61%);
+  --sky: hsl(194, 48%, 49%);
+}
+.league-spartan-regular {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.league-spartan-bold {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.antonio-regular {
+  font-family: "Antonio", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.planet-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 1025px;
+  border: 2px solid rebeccapurple;
+  background-image: url("../assets/background-stars.svg");
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* color: var(--neutral-0); */
+}
