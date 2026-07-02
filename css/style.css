@@ -11,6 +11,7 @@
   --red: hsl(2, 68%, 53%);
   --orange: hsl(10, 63%, 51%);
   --amber: hsl(33, 82%, 61%);
+  --blue: hsl(222, 87%, 56%);
   --sky: hsl(194, 48%, 49%);
 }
 .league-spartan-regular {
@@ -51,15 +52,372 @@ img {
   max-width: 100%;
   height: auto;
 }
-
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+button {
+  border: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
 .planet-container {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
   min-height: 1025px;
-  border: 2px solid rebeccapurple;
+  background-color: var(--neutral-950);
   background-image: url("../assets/background-stars.svg");
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  /* color: var(--neutral-0); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--neutral-0);
+  .container {
+    max-width: 1110px;
+    margin-inline: auto;
+  }
+  .header {
+    border-bottom: 1px solid rgba(217, 217, 217, 0.35);
+    .header__container {
+      padding: 25px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .header__logo {
+        font-size: 28px;
+        line-height: 130%;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        color: var(--neutral-0);
+      }
+      #open__button {
+        display: none;
+      }
+      nav {
+        ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          column-gap: 40px;
+          li {
+            position: relative;
+            &:hover::after {
+              position: absolute;
+              content: "";
+              width: 100%;
+              height: 2px;
+              top: -22px;
+              left: 0;
+              background-color: aliceblue;
+            }
+            &:nth-child(1):hover::after {
+              background-color: var(--sky);
+            }
+            &:nth-child(2):hover::after {
+              background-color: var(--amber);
+            }
+            &:nth-child(3):hover::after {
+              background-color: var(--purple);
+            }
+            &:nth-child(4):hover::after {
+              background-color: var(--orange);
+            }
+            &:nth-child(5):hover::after {
+              background-color: var(--red);
+            }
+            &:nth-child(6):hover::after {
+              background-color: var(--bronze);
+            }
+            &:nth-child(7):hover::after {
+              background-color: var(--teal);
+            }
+            &:nth-child(8):hover::after {
+              background-color: var(--blue);
+            }
+            a {
+              font-size: 11px;
+              text-transform: uppercase;
+              line-height: 225%;
+              letter-spacing: 1px;
+              color: var(--neutral-0);
+              opacity: 0.75;
+              transition: opacity 350ms ease-in-out;
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .main {
+    .planet__description {
+      margin-block: 127px 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      /* position: relative; */
+      .planet__images {
+        /* visibility: hidden;
+        opacity: 0; */
+        display: none;
+      }
+      .planet__images.bg-images {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          background-image: url("../assets/geology-mercury.png");
+          width: 163px;
+          height: 199px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          bottom: -125px;
+          left: 65px;
+        }
+      }
+      .planet__images.active {
+        /* visibility: visible;
+        opacity: 1; */
+        display: block;
+      }
+      .description__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        .description-text {
+          max-width: 350px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          h1 {
+            font-size: clamp(2.5rem, calc(1.364rem + 4.04vw), 5rem);
+            line-height: 130%;
+            text-transform: uppercase;
+            color: var(--neutral-0);
+            margin-block-end: 23px;
+          }
+          .text {
+            font-size: 14px;
+            line-height: 180%;
+            color: var(--neutral-0);
+            margin-block-end: 24px;
+          }
+          .links-planet {
+          }
+        }
+        .description-links {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          row-gap: 16px;
+          li {
+            width: 350px;
+            height: 48px;
+            border: 1px solid rgba(217, 217, 217, 0.35);
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 210%;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--neutral-0);
+            padding: 12px 24px;
+            cursor: pointer;
+            transition: background 450ms ease-in-out;
+            button {
+              border: none;
+              background: transparent;
+              font-weight: 700;
+              font-size: 12px;
+              line-height: 210%;
+              letter-spacing: 2.5px;
+              color: var(--neutral-0);
+              mix-blend-mode: normal;
+              opacity: 0.5;
+              padding-inline-end: 30px;
+              cursor: pointer;
+            }
+            &:hover {
+              border: none;
+              /* background: hsl(240, 17%, 26%); */
+              background: hsl(240, 19%, 24%);
+            }
+          }
+          li:has(button.active) {
+            border: none;
+            background-color: var(--sky);
+          }
+        }
+      }
+    }
+    .planet__data {
+      ul {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        li {
+          width: 255px;
+          height: 128px;
+          border: 1px solid rgba(217, 217, 217, 0.35);
+          padding: 24px;
+          font-size: clamp(1.25rem, calc(0.682rem + 2.02vw), 2.5rem);
+          line-height: 130%;
+          letter-spacing: -1.5px;
+          text-transform: uppercase;
+          color: var(--neutral-0);
+          span {
+            display: block;
+            font-weight: 700;
+            font-size: 11px;
+            line-height: 225%;
+            letter-spacing: 1px;
+            color: #ffffff;
+            mix-blend-mode: normal;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 768px */
+@media (width <= 48rem) {
+  .planet-container {
+    .header {
+      .header__container {
+        flex-direction: column;
+        row-gap: 32px;
+        padding: 32px 55px;
+        nav {
+          ul {
+            column-gap: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 440px */
+@media (width <= 27.5rem) {
+  .planet-container {
+    .header {
+      .header__container {
+        padding: 16px 24px;
+        flex-direction: row;
+        #open__button {
+          display: block;
+          background: transparent;
+          cursor: pointer;
+        }
+        nav {
+          position: fixed;
+          top: 100px;
+          right: -475px;
+          width: 100%;
+          z-index: 10;
+          ul {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 41px 0;
+            padding-inline-start: 24px;
+            li {
+              /* 1. ПОЛНОСТЬЮ ОТМЕНЯЕМ ЭФФЕКТ ХОВЕРА ИЗ ДЕСКТОПА */
+              &:hover::after {
+                /* Сбрасываем десктопный top: -22px */
+                top: 0;
+                /* Фиксируем мобильную ширину круга */
+                width: 20px;
+                /* Фиксируем мобильную высоту круга */
+                height: 20px;
+              }
+              &::before {
+                position: absolute;
+                content: "";
+                width: 6px;
+                height: 8px;
+                background-image: url(../assets/icon-chevron.svg);
+                background-repeat: no-repeat;
+                top: 10px;
+                left: 325px;
+              }
+              /* 2. СТИЛИ ДЛЯ МОБИЛЬНОГО КРУЖОЧКА (БЕЗ ХОВЕРА) */
+              &::after {
+                position: absolute;
+                content: "";
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                top: 0;
+                left: 0;
+                background-color: aliceblue;
+              }
+              /* Цвет кружочков применяется СРАЗУ, а не при ховере */
+              &:nth-child(1)::after,
+              &:nth-child(1):hover::after {
+                background-color: var(--sky);
+              }
+              &:nth-child(2)::after,
+              &:nth-child(2):hover::after {
+                background-color: var(--amber);
+              }
+              &:nth-child(3)::after,
+              &:nth-child(3):hover::after {
+                background-color: var(--purple);
+              }
+              &:nth-child(4)::after,
+              &:nth-child(4):hover::after {
+                background-color: var(--orange);
+              }
+              &:nth-child(5)::after,
+              &:nth-child(5):hover::after {
+                background-color: var(--red);
+              }
+              &:nth-child(6)::after,
+              &:nth-child(6):hover::after {
+                background-color: var(--bronze);
+              }
+              &:nth-child(7)::after,
+              &:nth-child(7):hover::after {
+                background-color: var(--teal);
+              }
+              &:nth-child(8)::after,
+              &:nth-child(8):hover::after {
+                background-color: var(--blue);
+              }
+              a {
+                font-size: 15px;
+                line-height: 165%;
+                text-align: center;
+                letter-spacing: 1.35px;
+                color: var(--neutral-0);
+                opacity: 1;
+                padding-inline-start: 45px;
+                /* Сбрасываем изменение прозрачности ссылки при ховере на мобилке */
+                &:hover {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+        nav.show {
+          right: 0;
+        }
+      }
+    }
+  }
 }
