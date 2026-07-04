@@ -59,7 +59,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul {
   margin: 0;
 }
 button {
@@ -168,6 +169,7 @@ ul {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       /* position: relative; */
       .planet__images {
         /* visibility: hidden;
@@ -196,19 +198,20 @@ ul {
       .description__content {
         display: flex;
         flex-direction: column;
-        row-gap: 40px;
+        /* row-gap: 40px; */
+        h1 {
+          font-size: clamp(2.5rem, calc(1.364rem + 4.04vw), 5rem);
+          line-height: 130%;
+          text-transform: uppercase;
+          color: var(--neutral-0);
+          margin-block-end: 23px;
+        }
         .description-text {
           max-width: 350px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          h1 {
-            font-size: clamp(2.5rem, calc(1.364rem + 4.04vw), 5rem);
-            line-height: 130%;
-            text-transform: uppercase;
-            color: var(--neutral-0);
-            margin-block-end: 23px;
-          }
+          margin-block-end: 40px;
+          /* display: flex; */
+          /* flex-direction: column; */
+          /* align-items: flex-start; */
           .text {
             font-size: 14px;
             line-height: 180%;
@@ -216,6 +219,27 @@ ul {
             margin-block-end: 24px;
           }
           .links-planet {
+            font-size: 14px;
+            line-height: 180%;
+            color: var(--neutral-0);
+            position: relative;
+            span {
+              font-size: 14px;
+              line-height: 180%;
+              color: var(--neutral-0);
+              mix-blend-mode: normal;
+              opacity: 0.5;
+            }
+            &::after {
+              position: absolute;
+              content: "";
+              width: 12px;
+              height: 12px;
+              background-image: url("../assets/icon-source.svg");
+              background-repeat: no-repeat;
+              left: 115px;
+              bottom: 7px;
+            }
           }
         }
         .description-links {
@@ -223,22 +247,22 @@ ul {
           flex-direction: column;
           align-items: center;
           row-gap: 16px;
+          padding-inline-start: 0;
           li {
             width: 350px;
             height: 48px;
             border: 1px solid rgba(217, 217, 217, 0.35);
-            font-weight: 700;
-            font-size: 12px;
-            line-height: 210%;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: var(--neutral-0);
             padding: 12px 24px;
             cursor: pointer;
             transition: background 450ms ease-in-out;
-            button {
-              border: none;
-              background: transparent;
+            position: relative;
+            /* Increment the counter for each li */
+            counter-increment: numbers;
+            &::before {
+              position: absolute;
+              /* Key change: set format to leading zero */
+              content: counter(numbers, decimal-leading-zero);
+              left: 12px;
               font-weight: 700;
               font-size: 12px;
               line-height: 210%;
@@ -246,13 +270,23 @@ ul {
               color: var(--neutral-0);
               mix-blend-mode: normal;
               opacity: 0.5;
-              padding-inline-end: 30px;
-              cursor: pointer;
             }
             &:hover {
               border: none;
               /* background: hsl(240, 17%, 26%); */
               background: hsl(240, 19%, 24%);
+            }
+            button {
+              border: none;
+              background: transparent;
+              font-weight: 700;
+              font-size: 12px;
+              line-height: 210%;
+              letter-spacing: 2.5px;
+              text-transform: uppercase;
+              color: var(--neutral-0);
+              padding-inline-start: 30px;
+              cursor: pointer;
             }
           }
           li:has(button.active) {
@@ -262,7 +296,9 @@ ul {
         }
       }
     }
+
     .planet__data {
+      padding-block-start: 190px;
       ul {
         display: flex;
         align-items: center;
