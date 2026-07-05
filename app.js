@@ -50,10 +50,13 @@ function initPlanetComponent() {
   // console.log(buttons);
   const planetImages = root.querySelectorAll(".planet__images");
   // console.log(planetImages);
+  const planetInfo = root.querySelectorAll(".description-text");
+  // console.log(planetInfo);
 
   // добавляем класс к 1-му рисунку и 1-й кнопке
   buttons[0].classList.add("active");
   planetImages[0].classList.add("active");
+  planetInfo[0].classList.add("active");
   buttons[0].setAttribute("aria-selected", "true");
   buttons[0].setAttribute("tabindex", "0");
 
@@ -65,28 +68,35 @@ function initPlanetComponent() {
       btn.setAttribute("tabindex", "-1");
     });
 
-    // активировать все кнопки
+    // активировать выбранную кнопку
     button.classList.add("active");
     button.setAttribute("aria-selected", "true");
     button.setAttribute("tabindex", "0");
 
+    // показать нужное изображение
     planetImages.forEach((item) => {
-      // console.log(item);
       item.classList.remove("active");
-      // console.log(button.dataset.tabTarget);
-      // console.log(item.id);  
       if (button.dataset.tabTarget === item.id) {
         item.classList.add("active");
       }
     });
+
+    // показать нужный текст (ИСПРАВЛЕНО)
+    // planetInfo.forEach((info) => {
+    //   info.classList.remove("active");
+    //   if (button.dataset.tabTarget === info.id) {
+    //     info.classList.add("active"); // <- здесь была ошибка
+    //   }
+    // });
+    // показать нужный текст
+    planetInfo.forEach((info) => {
+      info.classList.remove("active");
+      if (button.dataset.infoTarget === info.id) {
+        // Используем новый дата-атрибут
+        info.classList.add("active");
+      }
+    });
   }
-
-  // buttons.forEach((button, index) => {
-  //   button.addEventListener('click', () => {
-  //     console.log(123);
-
-  //   })
-  // })
 
   buttons.forEach((button, index) => {
     ["click", "keydown"].forEach((eventType) => {
@@ -98,7 +108,6 @@ function initPlanetComponent() {
         if (event.key === "ArrowRight") {
           newIndex = (index + 1) % buttons.length;
           console.log(newIndex);
-          
         }
 
         if (event.key === "ArrowLeft") {
