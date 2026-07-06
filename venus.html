@@ -5,10 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio&family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   
   <title>Frontend Mentor | Planets fact site</title>
+      <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
+  <div class="planet-container league-spartan-regular">
+          <header class="header">
+        <div class="header__container antonio-regular">
+          <a href="index.html" class="header__logo">the planets</a>
+          <button
+            id="open__button"
+            aria-label="open sidebar"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17">
+              <g fill="#FFF" fill-rule="evenodd">
+                <path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z" />
+              </g>
+            </svg>
+          </button>
+          <nav id="navbar">
+            <ul>
+              <li><a href="index.html">Mercury</a></li>
+              <li><a href="/">Venus</a></li>
+              <li><a href="earth.html">Earth</a></li>
+              <li><a href="mars.html">Mars</a></li>
+              <li><a href="jupiter.html">Jupiter</a></li>
+              <li><a href="saturn.html">Saturn</a></li>
+              <li><a href="uranus.html">Uranus</a></li>
+              <li><a href="neptune.html">Neptune</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="main container"></main>
+      <footer class="footer container"></footer>
+  </div>
   Venus
 
   <!-- Overview Content Start -->
@@ -59,5 +100,6 @@
 
   Average Temp.
   471°c
+  <script src="app.js" defer></script>
 </body>
 </html>

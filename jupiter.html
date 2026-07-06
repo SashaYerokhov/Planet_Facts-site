@@ -1,62 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio&family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Planets fact site</title>
-</head>
-<body>
-  Jupiter
+    <title>Frontend Mentor | Planets fact site</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="planet-container league-spartan-regular">
+      <header class="header">
+        <div class="header__container antonio-regular">
+          <a href="index.html" class="header__logo">the planets</a>
+          <button
+            id="open__button"
+            aria-label="open sidebar"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17">
+              <g fill="#FFF" fill-rule="evenodd">
+                <path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z" />
+              </g>
+            </svg>
+          </button>
+          <nav id="navbar">
+            <ul>
+              <li><a href="index.html">Mercury</a></li>
+              <li><a href="venus.html">Venus</a></li>
+              <li><a href="earth.html">Earth</a></li>
+              <li><a href="mars.html">Mars</a></li>
+              <li><a href="/">Jupiter</a></li>
+              <li><a href="saturn.html">Saturn</a></li>
+              <li><a href="uranus.html">Uranus</a></li>
+              <li><a href="neptune.html">Neptune</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="main container"></main>
+      <footer class="footer container"></footer>
+    </div>
+    Jupiter
 
-  <!-- Overview Content Start -->
+    <!-- Overview Content Start -->
 
-  Jupiter is the fifth planet from the Sun and the largest in the Solar System. 
-  It is a gas giant with a mass two and a half times that of all the other 
-  planets in the Solar System combined, but less than one-thousandth the mass 
-  of the Sun.
+    Jupiter is the fifth planet from the Sun and the largest in the Solar
+    System. It is a gas giant with a mass two and a half times that of all the
+    other planets in the Solar System combined, but less than one-thousandth the
+    mass of the Sun. Source : Wikipedia
+    <!-- URL: https://en.wikipedia.org/wiki/Jupiter -->
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Jupiter -->
+    <!-- Overview Content End -->
 
-  <!-- Overview Content End -->
+    <!-- Internal Structure Content Start -->
 
-  <!-- Internal Structure Content Start -->
+    When the Juno arrived in 2016, it found that Jupiter has a very diffuse core
+    that mixes into its mantle. A possible cause is an impact from a planet of
+    about ten Earth masses a few million years after Jupiter's formation, which
+    would have disrupted an originally solid Jovian core. Source : Wikipedia
+    <!-- URL: https://en.wikipedia.org/wiki/Jupiter#Internal_structure -->
 
-  When the Juno arrived in 2016, it found that Jupiter has a very diffuse core 
-  that mixes into its mantle. A possible cause is an impact from a planet of 
-  about ten Earth masses a few million years after Jupiter's formation, which 
-  would have disrupted an originally solid Jovian core.
+    <!-- Internal Structure Content End -->
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Jupiter#Internal_structure -->
+    <!-- Surface Geology Content Start -->
 
-  <!-- Internal Structure Content End -->
+    The best known feature of Jupiter is the Great Red Spot, a persistent
+    anticyclonic storm located 22° south of the equator. It is known to have
+    existed since at least 1831, and possibly since 1665. Source : Wikipedia
+    <!-- URL: https://en.wikipedia.org/wiki/Jupiter#Great_Red_Spot_and_other_vortices -->
 
-  <!-- Surface Geology Content Start -->
+    <!-- Surface Geology Content End -->
 
-  The best known feature of Jupiter is the Great Red Spot, a persistent 
-  anticyclonic storm located 22° south of the equator. It is known to have 
-  existed since at least 1831, and possibly since 1665.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Jupiter#Great_Red_Spot_and_other_vortices -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  9.93 Hours
-
-  Revolution Time
-  11.86 Years
-
-  Radius
-  69,911 KM
-
-  Average Temp.
-  -108°c
-</body>
+    01 Overview 02 Internal Structure 03 Surface Geology Rotation Time 9.93
+    Hours Revolution Time 11.86 Years Radius 69,911 KM Average Temp. -108°c
+    <script src="app.js" defer></script>
+  </body>
 </html>

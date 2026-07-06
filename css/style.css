@@ -415,20 +415,27 @@ ul {
         }
         nav {
           position: fixed;
-          top: 100px;
+          top: 80px;
           right: -475px;
           width: 100%;
+          background-color: var(--neutral-950);
           z-index: 10;
           ul {
             flex-direction: column;
             align-items: flex-start;
-            gap: 41px 0;
+            /* gap: 41px 0; */
             padding-inline-start: 24px;
             li {
+              border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+              max-width: 327px;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              min-height: 65px;
               /* 1. ПОЛНОСТЬЮ ОТМЕНЯЕМ ЭФФЕКТ ХОВЕРА ИЗ ДЕСКТОПА */
               &:hover::after {
                 /* Сбрасываем десктопный top: -22px */
-                top: 0;
+                top: 24px;
                 /* Фиксируем мобильную ширину круга */
                 width: 20px;
                 /* Фиксируем мобильную высоту круга */
@@ -441,7 +448,7 @@ ul {
                 height: 8px;
                 background-image: url(../assets/icon-chevron.svg);
                 background-repeat: no-repeat;
-                top: 10px;
+                top: 24px;
                 left: 325px;
               }
               /* 2. СТИЛИ ДЛЯ МОБИЛЬНОГО КРУЖОЧКА (БЕЗ ХОВЕРА) */
@@ -451,7 +458,7 @@ ul {
                 width: 20px;
                 height: 20px;
                 border-radius: 50%;
-                top: 0;
+                top: 24px;
                 left: 0;
                 background-color: aliceblue;
               }

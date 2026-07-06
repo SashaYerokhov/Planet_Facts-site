@@ -1,63 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio&family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Planets fact site</title>
-</head>
-<body>
-  Earth
+    <title>Frontend Mentor | Planets fact site</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="planet-container league-spartan-regular">
+      <header class="header">
+        <div class="header__container antonio-regular">
+          <a href="index.html" class="header__logo">the planets</a>
+          <button
+            id="open__button"
+            aria-label="open sidebar"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="17">
+              <g fill="#FFF" fill-rule="evenodd">
+                <path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z" />
+              </g>
+            </svg>
+          </button>
+          <nav id="navbar">
+            <ul>
+              <li><a href="index.html">Mercury</a></li>
+              <li><a href="venus.html">Venus</a></li>
+              <li><a href="/">Earth</a></li>
+              <li><a href="mars.html">Mars</a></li>
+              <li><a href="jupiter.html">Jupiter</a></li>
+              <li><a href="saturn.html">Saturn</a></li>
+              <li><a href="uranus.html">Uranus</a></li>
+              <li><a href="neptune.html">Neptune</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="main container"></main>
+      <footer class="footer container"></footer>
+    </div>
+    Earth
 
-  <!-- Overview Content Start -->
+    <!-- Overview Content Start -->
 
-  Third planet from the Sun and the only known planet to harbor life. 
-  About 29.2% of Earth's surface is land with remaining 70.8% is 
-  covered with water. Earth's distance from the Sun, physical properties 
-  and geological history have allowed life to evolve and thrive.
+    Third planet from the Sun and the only known planet to harbor life. About
+    29.2% of Earth's surface is land with remaining 70.8% is covered with water.
+    Earth's distance from the Sun, physical properties and geological history
+    have allowed life to evolve and thrive. Source : Wikipedia
+    <!-- URL: https://en.wikipedia.org/wiki/Earth -->
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Earth -->
+    <!-- Overview Content End -->
 
-  <!-- Overview Content End -->
+    <!-- Internal Structure Content Start -->
 
-  <!-- Internal Structure Content Start -->
+    Earth's interior, like that of the other terrestrial planets, is divided
+    into layers by their chemical or physical (rheological) properties. The
+    outer layer is a chemically distinct silicate solid crust, which is
+    underlain by a highly viscous solid mantle. Source : Wikipedia
+    <!-- URL: https://en.wikipedia.org/wiki/Earth#Internal_structure -->
 
-  Earth's interior, like that of the other terrestrial planets, is divided 
-  into layers by their chemical or physical (rheological) properties. The 
-  outer layer is a chemically distinct silicate solid crust, which is 
-  underlain by a highly viscous solid mantle.
+    <!-- Internal Structure Content End -->
 
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Earth#Internal_structure -->
+    <!-- Surface Geology Content Start -->
 
-  <!-- Internal Structure Content End -->
+    The total surface area of Earth is about 510 million km2. The continental
+    crust consists of lower density material such as the igneous rocks granite
+    and andesite. Less common is basalt, a denser volcanic rock that is the
+    primary constituent of the ocean floors. Source : Wikipedia
+    <!-- URL: https://en.wikipedia.org/wiki/Earth#Surface -->
 
-  <!-- Surface Geology Content Start -->
+    <!-- Surface Geology Content End -->
 
-  The total surface area of Earth is about 510 million km2. The continental 
-  crust consists of lower density material such as the igneous rocks granite 
-  and andesite. Less common is basalt, a denser volcanic rock that is the 
-  primary constituent of the ocean floors.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Earth#Surface -->
-
-  <!-- Surface Geology Content End -->
-
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
-
-  Rotation Time
-  0.99 Days
-
-  Revolution Time
-  365.26 Days
-
-  Radius
-  6,371 KM
-
-  Average Temp.
-  16°c
-</body>
+    01 Overview 02 Internal Structure 03 Surface Geology Rotation Time 0.99 Days
+    Revolution Time 365.26 Days Radius 6,371 KM Average Temp. 16°c
+    <script src="app.js" defer></script>
+  </body>
 </html>

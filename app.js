@@ -1,3 +1,16 @@
+async function loadJson(filePath) {
+  try {
+    const response = await fetch(filePath);
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    throw new Error(`Error loading JSON ${error.message}`);
+  }
+}
+
 const navbar = document.querySelector("#navbar");
 const openButton = document.querySelector("#open__button");
 
@@ -133,3 +146,11 @@ function initPlanetComponent() {
   });
 }
 initPlanetComponent();
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadJson("data.json")
+    .then((data) => {})
+    .catch((error) => {
+      console.error("Error loading data", error);
+    });
+});
