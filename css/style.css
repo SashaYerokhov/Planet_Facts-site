@@ -75,28 +75,28 @@ ul {
   list-style-type: none;
 }
 .planet-container {
-  max-width: 1440px;
+  max-width: 90rem;
   width: 100%;
   margin: 0 auto;
-  min-height: 1025px;
+  min-height: 64.0625rem;
   background-color: var(--neutral-950);
   background-image: url("../assets/background-stars.svg");
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--neutral-0);
   .container {
-    max-width: 1110px;
+    max-width: 69.375rem;
     margin-inline: auto;
   }
   .header {
     border-bottom: 1px solid rgba(217, 217, 217, 0.35);
     .header__container {
-      padding: 25px 32px;
+      padding: 1.5625rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       .header__logo {
-        font-size: 28px;
+        font-size: 1.75rem;
         line-height: 130%;
         letter-spacing: -1px;
         text-transform: uppercase;
@@ -111,7 +111,7 @@ ul {
           padding: 0;
           display: flex;
           align-items: center;
-          column-gap: 40px;
+          column-gap: 2.5rem;
           li {
             position: relative;
             &:hover::after {
@@ -119,7 +119,7 @@ ul {
               content: "";
               width: 100%;
               height: 2px;
-              top: -22px;
+              top: -1.375rem;
               left: 0;
               background-color: aliceblue;
             }
@@ -148,7 +148,7 @@ ul {
               background-color: var(--blue);
             }
             a {
-              font-size: 11px;
+              font-size: 0.6875rem;
               text-transform: uppercase;
               line-height: 225%;
               letter-spacing: 1px;
@@ -166,10 +166,9 @@ ul {
   }
   .main {
     .planet__description {
-      /* margin-block: 127px 86px; */
       margin-block: clamp(94px, calc(79px + 3.333vw), 127px)
         clamp(28px, calc(1.636px + 5.859vw), 86px);
-      padding-inline-start: 170px;
+      padding-inline-start: 10.625rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -182,18 +181,12 @@ ul {
       }
       .planet__images.bg-images {
         position: relative;
-        &::after {
-          content: "";
+        .geology {
           position: absolute;
-          background-image: url("../assets/geology-mercury.png");
-          /* width: 163px; */
           width: clamp(82px, calc(45.182px + 8.182vw), 163px);
-          /* height: 199px; */
           height: clamp(100px, calc(55px + 10vw), 199px);
-          background-repeat: no-repeat;
-          background-size: cover;
-          bottom: -125px;
-          left: 65px;
+          top: 14.0625rem;
+          left: 4.0625rem;
         }
       }
       .planet__images.active {
@@ -203,7 +196,6 @@ ul {
         display: flex;
         flex-direction: column;
         .description-text {
-          /* max-width: 350px; */
           max-width: clamp(327px, calc(316.545px + 2.323vw), 350px);
           margin-block-end: 40px;
           display: none;
@@ -212,23 +204,23 @@ ul {
             line-height: 130%;
             text-transform: uppercase;
             color: var(--neutral-0);
-            margin-block-end: 23px;
+            margin-block-end: 1.4375rem;
           }
           .text {
             font-size: 14px;
             line-height: 180%;
             color: var(--neutral-0);
-            margin-block-end: 24px;
+            margin-block-end: 1.5rem;
           }
           .links-planet {
-            font-size: 14px;
+            font-size: 0.875rem;
             line-height: 180%;
             color: var(--neutral-0);
             mix-blend-mode: normal;
             opacity: 0.5;
             position: relative;
             span {
-              font-size: 14px;
+              font-size: 0.875rem;
               line-height: 180%;
               color: var(--neutral-0);
               text-decoration: underline;
@@ -237,11 +229,11 @@ ul {
             &::after {
               position: absolute;
               content: "";
-              width: 12px;
-              height: 12px;
+              width: 0.75rem;
+              height: 0.75rem;
               background-image: url("../assets/icon-source.svg");
               background-repeat: no-repeat;
-              left: 115px;
+              left: 7.1875rem;
               bottom: 0;
             }
           }
@@ -253,13 +245,13 @@ ul {
           display: flex;
           flex-direction: column;
           align-items: center;
-          row-gap: 16px;
+          row-gap: 1rem;
           padding-inline-start: 0;
           li {
-            width: 350px;
-            height: 48px;
+            width: 21.875rem;
+            height: 3rem;
             border: 1px solid rgba(217, 217, 217, 0.35);
-            padding: 12px 24px;
+            padding: 0.75rem 1.5rem;
             cursor: pointer;
             transition: background 450ms ease-in-out;
             position: relative;
@@ -269,9 +261,9 @@ ul {
               position: absolute;
               /* Key change: set format to leading zero */
               content: counter(numbers, decimal-leading-zero);
-              left: 12px;
+              left: 0.75rem;
               font-weight: 700;
-              font-size: 12px;
+              font-size: 0.75rem;
               line-height: 210%;
               letter-spacing: 2.5px;
               color: var(--neutral-0);
@@ -287,7 +279,7 @@ ul {
               background: transparent;
               padding: 0;
               font-weight: 700;
-              font-size: 12px;
+              font-size: 0.75rem;
               line-height: 210%;
               letter-spacing: 2.5px;
               text-transform: uppercase;
@@ -308,15 +300,12 @@ ul {
     ul {
       display: flex;
       align-items: center;
-      column-gap: 30px;
+      column-gap: 1.875rem;
       li {
-        width: 255px;
-        /* width: clamp(255px, calc(359.727px - 7.273vw), 327px); */
-        height: 128px;
-        /* height: clamp(48px, calc(15.273px + 7.273vw), 120px); */
+        width: 15.9375rem;
+        height: 8rem;
         border: 1px solid rgba(217, 217, 217, 0.35);
-        padding: 24px;
-        /* padding: 24px clamp(11px, calc(5.091px + 1.313vw), 24px); */
+        padding: 1.5rem;
         font-size: clamp(1.25rem, calc(0.682rem + 2.02vw), 2.5rem);
         line-height: 130%;
         letter-spacing: -1.5px;
@@ -325,7 +314,7 @@ ul {
         span {
           display: block;
           font-weight: 700;
-          font-size: 11px;
+          font-size: 0.6875rem;
           line-height: 225%;
           letter-spacing: 1px;
           color: #ffffff;
@@ -340,17 +329,17 @@ ul {
 /* 768px */
 @media (width <= 48rem) {
   .container {
-    max-width: 686px;
+    max-width: 42.875rem;
   }
   .planet-container {
     .header {
       .header__container {
         flex-direction: column;
-        row-gap: 32px;
-        padding: 32px 55px;
+        row-gap: 2rem;
+        padding: 2rem 3.4375rem;
         nav {
           ul {
-            column-gap: 32px;
+            column-gap: 2rem;
           }
         }
       }
@@ -359,11 +348,11 @@ ul {
       .planet__description {
         flex-direction: column;
         padding-inline-start: 0;
-        row-gap: 130px;
+        row-gap: 8.125rem;
         .planet__images.bg-images {
-          &::after {
-            bottom: -90px;
-            left: 30px;
+          .geology {
+            top: 7.8125rem;
+            left: 1.875rem;
           }
         }
         .description__content {
@@ -373,13 +362,13 @@ ul {
           .description-text {
             margin-block-end: 0;
             .text {
-              margin-block-end: 32px;
+              margin-block-end: 2rem;
             }
           }
           .description-links {
             li {
-              width: 281px;
-              height: 40px;
+              width: 17.5625rem;
+              height: 2.5rem;
             }
           }
         }
@@ -387,11 +376,11 @@ ul {
     }
     .footer {
       ul {
-        column-gap: 10px;
+        column-gap: 0.625rem;
         li {
-          width: 164px;
-          height: 88px;
-          padding: 17px 16px;
+          width: 10.25rem;
+          height: 5.5rem;
+          padding: 1.0625rem 1rem;
         }
       }
     }
@@ -402,11 +391,11 @@ ul {
 @media (width <= 27.5rem) {
   .planet-container {
     .container {
-      max-width: 327px;
+      max-width: 20.4375rem;
     }
     .header {
       .header__container {
-        padding: 16px 24px;
+        padding: 1rem 1.5rem;
         flex-direction: row;
         #open__button {
           display: block;
@@ -415,16 +404,15 @@ ul {
         }
         nav {
           position: fixed;
-          top: 80px;
-          right: -475px;
+          top: 5rem;
+          right: -29.6875rem;
           width: 100%;
           background-color: var(--neutral-950);
           z-index: 10;
           ul {
             flex-direction: column;
             align-items: flex-start;
-            /* gap: 41px 0; */
-            padding-inline-start: 24px;
+            padding-inline-start: 1.5rem;
             li {
               border-bottom: 1px solid rgb(255, 255, 255, 0.1);
               max-width: 327px;
@@ -432,37 +420,37 @@ ul {
               display: flex;
               align-items: center;
               min-height: 65px;
-              /* 1. ПОЛНОСТЬЮ ОТМЕНЯЕМ ЭФФЕКТ ХОВЕРА ИЗ ДЕСКТОПА */
+              /*COMPLETELY CANCEL THE HOVVER EFFECT FROM THE DESKTOP*/
               &:hover::after {
-                /* Сбрасываем десктопный top: -22px */
-                top: 24px;
-                /* Фиксируем мобильную ширину круга */
-                width: 20px;
-                /* Фиксируем мобильную высоту круга */
-                height: 20px;
+                /* Reset desktop top: -22px */
+                top: 1.5rem;
+                /* Fix the mobile circle width */
+                width: 1.25rem;
+                /* Fix the mobile height of the circle */
+                height: 1.25rem;
               }
               &::before {
                 position: absolute;
                 content: "";
-                width: 6px;
-                height: 8px;
+                width: 0.375rem;
+                height: 0.5rem;
                 background-image: url(../assets/icon-chevron.svg);
                 background-repeat: no-repeat;
-                top: 24px;
-                left: 325px;
+                top: 1.5rem;
+                left: 20.3125rem;
               }
-              /* 2. СТИЛИ ДЛЯ МОБИЛЬНОГО КРУЖОЧКА (БЕЗ ХОВЕРА) */
+              /* STYLES FOR MOBILE CIRCLE (WITHOUT HOVVER) */
               &::after {
                 position: absolute;
                 content: "";
-                width: 20px;
-                height: 20px;
+                width: 1.25rem;
+                height: 1.25rem;
                 border-radius: 50%;
-                top: 24px;
+                top: 1.5rem;
                 left: 0;
                 background-color: aliceblue;
               }
-              /* Цвет кружочков применяется СРАЗУ, а не при ховере */
+              /* The color of the circles is applied IMMEDIATELY, and not on hover */
               &:nth-child(1)::after,
               &:nth-child(1):hover::after {
                 background-color: var(--sky);
@@ -496,14 +484,14 @@ ul {
                 background-color: var(--blue);
               }
               a {
-                font-size: 15px;
+                font-size: 0.9375rem;
                 line-height: 165%;
                 text-align: center;
                 letter-spacing: 1.35px;
                 color: var(--neutral-0);
                 opacity: 1;
-                padding-inline-start: 45px;
-                /* Сбрасываем изменение прозрачности ссылки при ховере на мобилке */
+                padding-inline-start: 2.8125rem;
+                /* Reset the link transparency change when hovering on mobile */
                 &:hover {
                   opacity: 1;
                 }
@@ -518,32 +506,32 @@ ul {
     }
     .main {
       .planet__description {
-        row-gap: 98px;
+        row-gap: 6.125rem;
         .planet__images.bg-images {
-          &::after {
-            bottom: -70px;
-            left: 15px;
+          .geology {
+            top: 5.3125rem;
+            left: 0.9375rem;
           }
         }
         .description__content {
           text-align: center;
           .description-text {
             h1 {
-              margin-block-end: 16px;
+              margin-block-end: 1rem;
             }
           }
           .description-links {
-            max-width: 336px;
+            max-width: 21rem;
             width: 100%;
             flex-direction: row;
             justify-content: space-between;
-            gap: 48px 0;
+            gap: 3rem 0;
             position: absolute;
-            top: 75px;
+            top: 4.6875rem;
             border-bottom: 1px solid rgba(217, 217, 217, 0.35);
             li {
-              width: 80px;
-              height: 25px;
+              width: 5rem;
+              height: 1.5625rem;
               border: none;
               padding: 0;
               &::before {
@@ -554,7 +542,7 @@ ul {
                 background: transparent;
               }
               button {
-                font-size: 9px;
+                font-size: 0.5625rem;
                 line-height: 275%;
                 text-align: center;
                 letter-spacing: 2px;
@@ -583,9 +571,9 @@ ul {
         gap: 8px 0;
         padding: 0;
         li {
-          width: 327px;
-          height: 48px;
-          padding: 11px 24px;
+          width: 20.4375rem;
+          height: 3rem;
+          padding: 0.6875rem 1.5rem;
           display: flex;
           align-items: center;
           justify-content: space-between;

@@ -26,8 +26,8 @@ function updateNavbar(event) {
     navbar.removeAttribute("inert");
   }
 }
-// Если nav - не имеет класс show - он добавляется и меню открывается
-//  в противном случае - меню закрывается
+// If nav doesn't have the show class, it is added and the menu opens.
+// Otherwise, the menu closes.
 function openSidebar() {
   if (navbar.classList.contains("show") === false) {
     navbar.classList.add("show");
@@ -40,14 +40,8 @@ function openSidebar() {
   }
 }
 
-// function closeSidebar() {
-//   navbar.classList.remove("show");
-//   openButton.setAttribute("aria-expanded", false);
-//   navbar.removeAttribute("inert", "");
-// }
 
 openButton.addEventListener("click", openSidebar);
-// openButton.addEventListener("click", closeSidebar);
 
 updateNavbar(media);
 
@@ -55,7 +49,7 @@ function initPlanetComponent() {
   const root = document.querySelector(".planet__description");
   // console.log(root);
   if (!root) return;
-  // обертка для кнопок
+// wrapper for buttons
   const descriptionLinks = document.querySelector(".description-links");
   // console.log(descriptionLinks);
 
@@ -66,7 +60,7 @@ function initPlanetComponent() {
   const planetInfo = root.querySelectorAll(".description-text");
   // console.log(planetInfo);
 
-  // добавляем класс к 1-му рисунку и 1-й кнопке
+ // add class to 1st image and 1st button
   buttons[0].classList.add("active");
   planetImages[0].classList.add("active");
   planetInfo[0].classList.add("active");
@@ -74,19 +68,19 @@ function initPlanetComponent() {
   buttons[0].setAttribute("tabindex", "0");
 
   function activateTab(button) {
-    // деактивировать все кнопки
+    // deactivate all buttons
     buttons.forEach((btn) => {
       btn.classList.remove("active");
       btn.setAttribute("aria-selected", "false");
       btn.setAttribute("tabindex", "-1");
     });
 
-    // активировать выбранную кнопку
+    // activate the selected button
     button.classList.add("active");
     button.setAttribute("aria-selected", "true");
     button.setAttribute("tabindex", "0");
 
-    // показать нужное изображение
+    // show the desired image
     planetImages.forEach((item) => {
       item.classList.remove("active");
       if (button.dataset.tabTarget === item.id) {
@@ -94,18 +88,11 @@ function initPlanetComponent() {
       }
     });
 
-    // показать нужный текст (ИСПРАВЛЕНО)
-    // planetInfo.forEach((info) => {
-    //   info.classList.remove("active");
-    //   if (button.dataset.tabTarget === info.id) {
-    //     info.classList.add("active"); // <- здесь была ошибка
-    //   }
-    // });
-    // показать нужный текст
+   // show the desired text
     planetInfo.forEach((info) => {
       info.classList.remove("active");
       if (button.dataset.infoTarget === info.id) {
-        // Используем новый дата-атрибут
+        // Use the new data attribute
         info.classList.add("active");
       }
     });
@@ -147,89 +134,12 @@ function initPlanetComponent() {
 }
 initPlanetComponent();
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   loadJson("data.json")
-//     .then((data) => {
-//       const footerPlanet = document.querySelector('.footer');
-//       data.forEach((item) => {
-//         const ul = document.createElement('ul');
-//         ul.classList.add('antonio-regular');
-//         ul.setAttribute('data-qualification', `${item.name}`);
-//         ul.innerHTML = `
-//             <li>
-//               <span class="league-spartan-bold">Rotation Time</span> ${item.rotation}
-//             </li>
-//             <li>
-//               <span class="league-spartan-bold">Revolution Time</span>${item.revolution}
-//             </li>
-//             <li>
-//               <span class="league-spartan-bold">Radius</span>${item.radius}</li>
-//             <li>
-//               <span class="league-spartan-bold">Average Temp.</span>${item.temperature}</li>
-//         `;
-//         footerPlanet.appendChild(ul);
-//       })
-//     })
-//     .catch((error) => {
-//       console.error("Error loading data", error);
-//     });
-// });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   // 1. Получаем имя планеты из URL-адреса страницы
-//   const urlParams = new URLSearchParams(window.location.search);
-//   const planetName = urlParams.get('name');
-
-//   if (!planetName) {
-//     console.error("Имя планеты не указано в URL");
-//     return;
-//   }
-
-//   loadJson("data.json")
-//     .then((data) => {
-//       // 2. Ищем в JSON только нужную планету
-//       const item = data.find(p => p.name.toLowerCase() === planetName.toLowerCase());
-
-//       if (!item) {
-//         console.error(`Планета с именем ${planetName} не найдена в базе данных`);
-//         return;
-//       }
-
-//       // 3. Выводим данные найденной планеты
-//       const footerPlanet = document.querySelector('.footer');
-//       const ul = document.createElement('ul');
-
-//       // Исправлено: в classList.add точка не нужна
-//       ul.classList.add('antonio-regular');
-//       ul.setAttribute('data-qualification', item.name);
-
-//       ul.innerHTML = `
-//           <li>
-//             <span class="league-spartan-bold">Rotation Time</span> ${item.rotation}
-//           </li>
-//           <li>
-//             <span class="league-spartan-bold">Revolution Time</span> ${item.revolution}
-//           </li>
-//           <li>
-//             <span class="league-spartan-bold">Radius</span> ${item.radius}
-//           </li>
-//           <li>
-//             <span class="league-spartan-bold">Average Temp.</span> ${item.temperature}
-//           </li>
-//       `;
-//       footerPlanet.appendChild(ul);
-//     })
-//     .catch((error) => {
-//       console.error("Error loading data", error);
-//     });
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Находим тег body и читаем из него имя планеты
+  // 1. Find the body tag and read the planet's name from it
   const bodyElement = document.body;
   const planetName = bodyElement.getAttribute("data-planet");
 
-  // Проверка: если открыт файл без этого атрибута (например, контакты или главная)
+ // Check if a file without this attribute is opened (e.g. contacts or home)
   if (!planetName) {
     console.warn("На этой странице не задан атрибут data-planet в теге body.");
     return;
@@ -237,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loadJson("data.json")
     .then((data) => {
-      // 2. Ищем в JSON-файле планету с таким же именем
+      // 2. Search the JSON file for a planet with the same name
       const item = data.find(
         (p) => p.name.toLowerCase() === planetName.toLowerCase(),
       );
@@ -284,6 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
             aria-labelledby="tab-3"
           >
             <img src="${item.images.planet}" alt="${item.name}" />
+            <img src="${item.images.geology}" class="geology" alt="${item.name}" />
           </div>
           <div class="description__content">
             <div
@@ -378,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
       `;
       mainPlanet.appendChild(section);
-      // 3. Находим футер и добавляем в него данные
+      // 3. Find the footer and add data to it
       const footerPlanet = document.querySelector(".footer");
       if (!footerPlanet) {
         console.error("Элемент с классом .footer не найден на странице");
