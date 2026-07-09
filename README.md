@@ -39,6 +39,7 @@ For each planet, the website displays:
 * **Physical properties:** mass, equatorial radius, gravity.
 * **Orbital properties:** rotation time, revolution time, radius and average temperature.
 * **Atmosphere:** average temperature, gas composition.
-
+## 👤 Author
+* Sasha / SashaYerokhov — (https://github.com/SashaYerokhov)
 
 **Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
