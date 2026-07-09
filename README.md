@@ -2,22 +2,12 @@
 
 This is a solution to the [Planets fact site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Table of contents
+# 🌌 Solar System Planet Characteristics Websites
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+An interactive website containing detailed astronomical data on the eight planets of the Solar System. The project is designed for space enthusiasts and educational purposes.
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+## 🚀 Project Link
+👉 [View the site live](https://sashayerokhov.github.io/Planet_Facts-site/)
 
 ## Overview
 
